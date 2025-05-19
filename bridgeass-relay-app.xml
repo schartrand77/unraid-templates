@@ -8,9 +8,15 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/schartrand77/bridgeass-relay-app</Support> <!-- Replace if needed -->
   <Project>https://github.com/schartrand77/bridgeass-relay-app</Project> <!-- Replace if needed -->
-  <Overview>A fastAPI-based relay for bridgeass events. Small, fast, and kinda awesome.</Overview>
-  <Category>Network: Tools</Category>
+  <Overview>A FastAPI-based relay for bridgeass events. Forwards stuff to Home Assistant. You're welcome.</Overview>
+  <Category>HomeAutomation: Network</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <Icon>https://raw.githubusercontent.com/YOURUSERNAME/YOURREPO/main/icon.png</Icon> <!-- Optional -->
-  <Config Name="WebUI Port" Target="8000" Default="8000" Mode="tcp" Description="Port for FastAPI relay server" Type="Port" />
+
+  <!-- Port Mapping -->
+  <Config Name="WebUI Port" Target="8000" Default="8000" Mode="tcp" Description="Port for the FastAPI relay server" Type="Port" />
+
+  <!-- Environment Variables -->
+  <Config Name="Home Assistant URL" Target="HOME_ASSISTANT_URL" Default="http://192.168.1.100:8123" Description="Base URL of your Home Assistant instance" Type="Environment" />
+  <Config Name="Home Assistant Token" Target="HOME_ASSISTANT_TOKEN" Default="" Description="Long-lived access token for Home Assistant" Type="Environment" />
 </Container>
