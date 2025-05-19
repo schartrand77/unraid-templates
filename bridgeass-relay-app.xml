@@ -17,6 +17,6 @@
   <Config Name="WebUI Port" Target="8000" Default="8000" Mode="tcp" Description="Port for the FastAPI relay server" Type="Port" />
 
   <!-- Environment Variables -->
-  <Config Name="Home Assistant URL" Target="HOME_ASSISTANT_URL" Default="http://192.168.1.100:8123" Description="Base URL of your Home Assistant instance" Type="Environment" />
+  <Config Name="Home Assistant URL" Target="HOME_ASSISTANT_URL" Default="http://192.xxx.x.xxx:8123" Description="Base URL of your Home Assistant instance" Type="Environment" />
   <Config Name="Home Assistant Token" Target="HOME_ASSISTANT_TOKEN" Default="" Description="Long-lived access token for Home Assistant" Type="Environment" />
 </Container>
